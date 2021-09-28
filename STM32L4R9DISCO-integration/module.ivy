@@ -1,0 +1,54 @@
+<!--
+	IVY
+	
+	Copyright 2019-2021 MicroEJ Corp. All rights reserved.
+	MicroEJ Corp. PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+-->
+<ivy-module version="2.0" xmlns:ea="http://www.easyant.org" xmlns:m="http://ant.apache.org/ivy/extra" xmlns:ej="https://developer.microej.com" ej:version="2.0.0">
+
+    <info organisation="com.is2t.CM4.referencePlatforms.st" module="STM32L4R9DISCO-${example.platform.uid}" status="integration" revision="0.1.0">
+        <ea:build organisation="com.is2t.easyant.buildtypes" module="build-microej-ri" revision="2.3.2"/>
+    	<ea:property name="bsp.project.microej.dir" value="${easyant.module.dir}/../STM32L4R9DISCO-bsp/Projects/32L4R9IDISCOVERY/MicroEJ"/>
+		<ea:property name="skip.doc" value="set"/>
+    </info>
+    
+    <configurations>
+        <conf name="default" visibility="public" description="runtime dependencies artifact can be used with this conf"/>
+        <conf name="test" visibility="private" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases."/>
+        <conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+        <conf name="source" visibility="public" description="source code and architectures"/>
+		<conf name="documentation" visibility="public" description="socumentation files"/>
+		<conf name="platformEval" visibility="public" description="evaluation platform"/>
+		<conf name="platformDev" visibility="public" description="production platform"/>
+    </configurations>
+    
+    <publications/>
+    
+    <dependencies>
+    
+    	<!-- architectures -->
+		<dependency org="com.is2t.CM4.platform" name="${example.xpf.name}" rev="7.11.0"/>
+		<dependency org="com.is2t.CM4.platform" name="${example.xpf.name}UI" rev="12.0.2"/>
+		<dependency org="com.is2t.CM4.platform" name="${example.xpf.name}GIML" rev="3.1.0" transitive="false"/>
+		<dependency org="com.is2t.CM4.platform" name="${example.xpf.name}Standalone" rev="6.0.0"  branch="iar_linker" transitive="false"/>
+		
+		<!-- cco -->
+		<dependency org="com.is2t.bsp.ll.mjvm" name="llmjvmFreeRTOS" rev="1.0.0"/>
+		<dependency org="com.microej.clibrary.llimpl" name="trace-systemview" rev="2.0.2"/>
+		<dependency org="com.microej.clibrary.thirdparty" name="systemview-freertos10" rev="1.0.1"/>
+		
+		<!-- rip -->
+		<dependency changing="true" org="com.is2t.microej.deploy" name="seggerJLink" rev="1.4.0" transitive="false">
+        	<artifact name="seggerJLink" ext="rip"/>
+        </dependency>
+        <!-- use stlink for STM32F746G-DISCO but replace at build time the external loader (see module.ant) -->
+		<dependency changing="true" transitive="false" org="com.is2t.microej.deploy" name="stlink-STM32F746G-DISCO" rev="1.4.1"/>
+        
+        <!-- misc -->
+		<dependency transitive="false" org="com.is2t.tools.thirdPartyIDE" name="IARTools" rev="0.13.1">
+        	<artifact ext="zip"/>
+        </dependency>
+		
+    </dependencies>
+    
+</ivy-module>

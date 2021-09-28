@@ -1,0 +1,24 @@
+<!--
+	ANT
+	
+	Copyright 2019 MicroEJ Corp. All rights reserved.
+	MicroEJ Corp. PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+-->
+<project name="CTEYC">
+	
+	<property name="easyant.inject.example.platform.uid" value="CTEYC"/>
+	
+	<!-- CTEYC has no KF support -->
+	<property name="easyant.inject.no.kf" value="true"/>
+	
+
+	<property name="easyant.module.filename" value="module.ivy" />
+	<basename file="${easyant.module.filename}" property="easyant.module.filename.without.ext" suffix=".ivy"/>
+	<echoproperties destfile="${easyant.module.dir}/${easyant.module.filename.without.ext}.properties">
+		<propertyset>
+			<propertyref regex="easyant.inject.example.*"/>
+			<mapper type="glob" from="easyant.inject.*" to="*"></mapper>
+		</propertyset>
+	</echoproperties>
+
+</project>

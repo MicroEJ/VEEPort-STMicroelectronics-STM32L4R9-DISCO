@@ -1,0 +1,7 @@
+STM32L4R9DISCO-configuration/examples/examples.zip
+STM32L4R9DISCO-configuration/dropins/tools/giml/StringEncoding-1.0.1.jar
+STM32L4R9DISCO-configuration/dropins/tools/giml/asm-4.1.jar
+STM32L4R9DISCO-configuration/dropins/tools/giml/classpathLoader-1.1.1.jar
+STM32L4R9DISCO-configuration/dropins/tools/giml/giml-annotation-processor.jar
+STM32L4R9DISCO-configuration/dropins/tools/giml/giml-compiler.jar
+STM32L4R9DISCO-configuration/dropins/tools/giml/giml-model.jar

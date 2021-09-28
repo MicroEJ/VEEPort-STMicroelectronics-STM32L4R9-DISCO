@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<platform hardwarePartNumber="STM32L4R9DISCO" name="SingleApp" version="1.0.0" provider="MicroEJ" vendorUrl="http://developer.microej.com" workbenchMinVersion="1.7.0">
+    <environment architecture="CM4" baseline="14" hardwarePartNumber="CM4" toolchain="CM4hardfp_IAR83" name="flopi4I35" techVersion="1.6" version="7.11.0" level="dev" provider="MicroEJ" licenseTag="IS2T_J8F5C"/>
+    <group name="device"/>
+    <group name="frontPanel"/>
+    <group name="giml"/>
+    <group name="extensible"/>
+    <group name="ui">
+        <without name="display_decoder_bmpm"/>
+        <without name="leds"/>
+    </group>
+</platform>
