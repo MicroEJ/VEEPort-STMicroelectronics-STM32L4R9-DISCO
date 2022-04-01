@@ -1,0 +1,59 @@
+..
+	Copyright 2019-2022 MicroEJ Corp. All rights reserved.
+	Use of this source code is governed by a BSD-style license that can be found with this software.
+
+===========
+ Changelog
+===========
+
+----------------------
+ [1.0.0] - 2022-04-01
+----------------------
+
+Added
+=====
+
+- Update architecture to 7.16.0.
+- Update UI pack to 13.1.0.
+- Add device pack 1.1.1.
+- Add Platform Configuration Additions 1.4.0.
+- Add build and run scripts.
+- Add helloworld application files to compile the BSP without any platform.
+- Add release notes.
+
+Changed
+=======
+
+- Update UI support for UI pack 13.x.
+- Refactor project to be consistent with Platform template.
+- Remove framerate task.
+- Update readme.
+- Update copyrights and license.
+
+Removed
+=======
+
+- Remove GIML pack.
+- Remove deploy tools.
+
+Fixed
+=====
+
+- Improve interrupts support using FreeRTOS's ``xPortIsInsideInterrupt()``.
+- Increase joystick repeat period to 500ms.
+
+----------------------
+ [0.1.0] - 2021-09-28
+----------------------
+
+Added
+=====
+
+- Add architecture 7.11.0.
+- Add UI pack 12.0.2.
+- ADD GIML pack 3.1.0.
+- Add core support.
+- Add UI support (display, touch, joystick).
+- Add trace support (SystemView).
+- Add custom support to draw images with rotation efficiently.
+- Initial release of the platform.

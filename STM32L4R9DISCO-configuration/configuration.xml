@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-	Copyright 2019 MicroEJ Corp. All rights reserved.	
-	For demonstration purpose only.
-	MicroEJ Corp. PROPRIETARY. Use is subject to license terms.
+	ANT
+
+	Copyright 2018-2020 MicroEJ Corp. All rights reserved.
+	Use of this source code is governed by a BSD-style license that can be found with this software.
+
 -->
-<project name="configuration" default="howto">
+<project name="configuration">
 
 	<!--
-		Defines some properties used in this configuration project 
-		(in ant and properties files)
+		Script called by MicroEJ Workbench when building the platform.
 	-->
-	<dirname file="${ant.file.configuration}" property="project.dir"/>
-	<property name="workspace" location="${project.dir}/.."/>
-	<basename file="${project.dir}" suffix="-configuration" property="project.prefix"/>
-
-	<!-- 
-		Helpful target
-	-->
-	<target name="howto">
-		<property name="readme" location="${ant.file.configuration}/../documentation/README.txt"/>
-		<echo message="This script file is not the entry point to build the platform."/>
-		<echo message="Please follow the steps described into the file '${readme}'."/>
-	</target>
+	
+	<!-- Import Platform Configuration Additions build file -->
+	<dirname file="${ant.file.configuration}" property="configuration.dir"/>
+	<import file="${configuration.dir}/build/platform/platform.ant"/>
 	
 </project>

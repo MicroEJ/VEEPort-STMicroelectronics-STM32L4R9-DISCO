@@ -1,10 +1,7 @@
 <?xml version="1.0"?>
 <!--
-	Front Panel
-	
-	Copyright 2019 MicroEJ Corp. All rights reserved.
-	For demonstration purpose only.
-	MicroEJ Corp. PROPRIETARY. Use is subject to license terms.
+	Copyright 2019-2022 MicroEJ Corp. All rights reserved.
+	Use of this source code is governed by a BSD-style license that can be found with this software.
 -->
 <frontpanel 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -22,6 +19,7 @@
 			enterSkin="joystick_push.png" 
 			skin="joystick_skin.png"
 			filter="joystick_mask.png"
+			repeatPeriod="500"
 		/>
 	</device>
 </frontpanel>

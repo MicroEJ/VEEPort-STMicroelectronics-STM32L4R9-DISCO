@@ -1,24 +1,17 @@
 /*
- * Java
- *
- * Copyright 2019 MicroEJ Corp. All rights reserved.
- * For demonstration purpose only.
- * MicroEJ Corp. PROPRIETARY. Use is subject to license terms.
+ * Copyright 2019-2022 MicroEJ Corp. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be found with this software.
  */
 package com.microej;
 
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-/**
- *
- */
 public class CircularRotationExtractor {
 
-	public static final String IMAGE_PATH = "E:\\work\\eclipse\\workspaces\\_P0171_STM32L4R9-DISCO\\RotationExtractor\\src\\com\\microej\\390.png";
+	public static final String IMAGE_PATH = "/com/microej/390.png";
 	public static final int USELESS_COLOR = 0xffffff;
 	public static final ArrayPrinter PRINTER = new ImmutableArray();
 
@@ -70,7 +63,7 @@ public class CircularRotationExtractor {
 	private static BufferedImage loadImage() {
 		BufferedImage bi;
 		try {
-			bi = ImageIO.read(new File(IMAGE_PATH));
+			bi = ImageIO.read(CircularRotationExtractor.class.getResourceAsStream(IMAGE_PATH));
 
 			if (bi == null) {
 				// it is not an image!
