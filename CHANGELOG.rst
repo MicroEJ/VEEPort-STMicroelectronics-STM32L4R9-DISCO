@@ -5,6 +5,27 @@
 ===========
  Changelog
 ===========
+----------------------
+ [1.0.1] - 2022-07-06
+----------------------
+
+Added
+=====
+
+- Verify flash operation in ``run.bat`` script.
+- bsp readme.
+
+Changed
+=======
+
+- Update readme.
+- Update release note.
+
+
+Fixed
+=====
+
+- Run software after flashing in run.bat.
 
 ----------------------
  [1.0.0] - 2022-04-01

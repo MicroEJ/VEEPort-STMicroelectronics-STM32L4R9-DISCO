@@ -3,7 +3,7 @@
     Use of this source code is governed by a BSD-style license that can be found with this software..
 
 .. |BOARD_NAME| replace:: STM32L4R9I-DISCO
-.. |PLATFORM_VER| replace:: 1.0.0
+.. |PLATFORM_VER| replace:: 1.0.1
 .. |PLATFORM| replace:: MicroEJ Platform
 .. |MANUFACTURER| replace:: STMicroelectronics
 
@@ -98,6 +98,15 @@ via a MIPI DSI.
 
 The MicroUI back buffer is located in RAM and the MicroUI images heap is located in external RAM.
 
+Known issues/limitations
+========================
+
+- Enable to reset the software after a flash
+    - **Brief**: After a flash program and reset operation from the debug link, the software is not able to start correctly and displays a black screen. A manuel cold reset is required.
+    - **Symptoms** : A black screen with a PC at 0x1FFF 0000 - 0x1FFF 7000 (System memory) range instead at 0x0800 0000-0x0820 0000 (Flash memory) range.
+    - **Workaround** : Unplug/replug the STM32L4R9DISCO power supply.
+
+
 Platform Memory Layout
 ======================
 
@@ -164,7 +173,7 @@ Memory Layout
      - RAM
    * - MicroUI images heap
      - ``.bss.microui.display.imagesHeap``
-     - PSRAM
+     - SDRAM
 
 Please also refer to the MicroEJ docs website page available `here
 <https://docs.microej.com/en/latest/PlatformDeveloperGuide/coreEngine.html#link>`__

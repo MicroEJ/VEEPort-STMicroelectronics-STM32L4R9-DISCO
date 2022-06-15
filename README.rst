@@ -10,6 +10,7 @@
 .. |RTOS| replace:: FreeRTOS RTOS
 .. |MANUFACTURER| replace:: STMicroelectronics
 
+.. _README MicroEJ BSP: ./STM32L4R9DISCO-bsp/projects/microej/README.rst
 .. _RELEASE NOTES: ./RELEASE_NOTES.rst
 .. _CHANGELOG: ./CHANGELOG.rst
 
@@ -34,6 +35,10 @@ This directory also contains:
   - the known issues and the limitations,
   - the development environment,
   - the list of the dependencies and their versions.
+
+* `README MicroEJ BSP`_ recommended for users familiar with the
+  |MANUFACTURER| SDK and advanced usage on how to customize the build
+  process.
 
 Board Technical Specifications
 ==============================
@@ -63,16 +68,6 @@ Here is a list of |BOARD_NAME| useful documentation links:
 
 - Board documentation available `here <https://www.st.com/en/evaluation-tools/32l4r9idiscovery.html#documentation>`__
 - MCU documentation available `here <https://www.st.com/en/microcontrollers-microprocessors/stm32l4r9-s9.html#documentation>`__
-
-Benchmarks
-==========
-
-RAM Speed
----------
-
-* RAM speed average read access: 8.583069 MB/s 
-* RAM speed average write access: 13.987223 MB/s 
-* RAM speed average transfer access: 13.987223 MB/s 
 
 Platform Specifications
 =======================
@@ -115,7 +110,7 @@ The |PLATFORM| is derived into:
 
 The |PLATFORM| can be built using the following toolchains:
 
-- IAR
+- IAR EmbeddedWorkbench version 8.50.6 or higher
 
 Requirements
 ============
@@ -153,8 +148,9 @@ terminal and enter the following command lines:
 The BSP project build is launched. Please wait for the end of the build.
 
 The build script expects the toolchain to be installed at a known
-path.  If you installed it elsewhere, open the ``set_project_env.bat``
-file and edit the value of the ``IAREW_INSTALLATION_DIR`` variable.
+path.  If you installed it elsewhere, see `README MicroEJ BSP`_ for
+how to customize its path.
+
 
 Board Setup
 ===========
@@ -173,7 +169,7 @@ The |BOARD_NAME| board can be flashed using |MANUFACTURER|
 bootloader. Please Follow the steps below:
 
 - Plug the device to your computer using a USB cable (on micro-USB port labeled ``USB STLINK``).
-- Open a terminal.
+- Open a terminal and enter the following command lines:
 
 **On Windows:**
 

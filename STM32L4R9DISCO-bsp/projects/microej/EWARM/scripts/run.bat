@@ -32,6 +32,6 @@ CD %~dp0%
 
 @echo on
 
-"%CUBE_PROGRAMMER_DIR%\STM32_Programmer_CLI.exe" -c port=SWD mode=UR -w "%APPLICATION_FILE%" -el "%CUBE_PROGRAMMER_DIR%\ExternalLoader\MX25LM51245G_STM32L4R9I-DISCO.stldr" -rst
+"%CUBE_PROGRAMMER_DIR%\STM32_Programmer_CLI.exe" -c port=SWD mode=UR -w "%APPLICATION_FILE%" -v -el "%CUBE_PROGRAMMER_DIR%\ExternalLoader\MX25LM51245G_STM32L4R9I-DISCO.stldr"  -hardRst -s
 
 CD "%CURRENT_DIRECTORY%"
