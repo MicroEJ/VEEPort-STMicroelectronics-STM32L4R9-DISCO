@@ -9,8 +9,8 @@ REM 'set_project_env' is responsible for
 REM - checking the availability of required environment variables 
 REM - setting project local variables for 'build.bat' and 'run.bat' 
 
-REM IAR Embedded Workbench installation directory (e.g.: C:\Program Files (x86)\IAR Systems\Embedded Workbench VERSION)
-SET IAREW_INSTALLATION_DIR=C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4
+REM IAR Embedded Workbench installation directory (e.g.: C:\Program Files\IAR Systems\Embedded Workbench VERSION)
+SET IAREW_INSTALLATION_DIR=C:\Program Files\IAR Systems\Embedded Workbench 9.0
 REM IAREW project directory that contains the project file .ewp (e.g.: %~dp0\..\)
 SET IAREW_PROJECT_DIR=%~dp0%\..
 REM IAREW project file name without the extension .ewp (e.g.: Project)

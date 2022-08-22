@@ -15,7 +15,7 @@ ant_properties +=  " -Deasyant.override.module.name=CTEYC"
 buildWithAnt{
   MODULE_DIR = "STM32L4R9DISCO-configuration"				// The name of the project into which your MODULE_FILENAME is. Default value is : "" . So leave blank if your MODULE_FILENAME is in the root of your gitlab project.
   //MODULE_FILENAME= ""				// The module filename. Default value is : module.ivy. Set it if yours is different.
-  LABEL = "iar-8.50.6"					// The label where build must be run. Default value is : public. Set it if yours is different.
+  LABEL = "iar-9.20"					// The label where build must be run. Default value is : public. Set it if yours is different.
   
   //ANT_VERSION = ""				// The version of ant by Microej. Default value is : MMM MicroEJ 5.1.0. Set it if yours is different.
   ANT_PROPERTIES = "${ant_properties}"			// The properties run with ant. Default value is already set. Add specific properties if necessary. As ('-DnameOfProperties=valueofProperty').

@@ -110,7 +110,7 @@ The |PLATFORM| is derived into:
 
 The |PLATFORM| can be built using the following toolchains:
 
-- IAR EmbeddedWorkbench version 8.50.6 or higher
+- IAR EmbeddedWorkbench version 9.20.2 or higher
 
 Requirements
 ============
@@ -123,9 +123,9 @@ Requirements
 BSP Setup
 =========
 
-Install the following softwares:
+Install the following software:
 
-- The IAR EmbeddedWorkbench version 8.50.6, available `here <https://www.iar.com/iar-embedded-workbench/>`__
+- The IAR EmbeddedWorkbench version 9.20.2, available `here <https://www.iar.com/iar-embedded-workbench/>`__
 - The STM32CubeProgrammer version 2.8.0, available `here <https://www.st.com/en/development-tools/stm32cubeprog.html>`__
 
 BSP Compilation
@@ -242,7 +242,7 @@ prefixed by the given name:
   and images for the |SIM|. This project is updated once the platform
   is built.
 
-- ``STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.2``:
+- ``STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.3``:
   Contains the |RCP| Platform project which is empty by default until
   the Platform is built.
 
@@ -274,7 +274,7 @@ At the end of the execution the |PLATFORM| is fully built for the
 
 
 The Platform project should be refreshed with no error in the |RCP|
-``STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.2``.
+``STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.3``.
 
 Please refer to
 https://docs.microej.com/en/latest/ApplicationDeveloperGuide/standaloneApplication.html
@@ -291,7 +291,7 @@ To run a Testsuite on the |BOARD_NAME| board please refer to the testsuite tutor
 
 In ``config.properties``, the property ``target.platform.dir`` must be
 set to the absolute path to the platform.  For example
-``xxx/STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.2/source``.
+``xxx/STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.3/source``.
 
 Troubleshooting
 ===============
