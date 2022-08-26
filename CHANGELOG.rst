@@ -7,6 +7,21 @@
 ===========
 
 ----------------------
+ [1.0.4] - 2022-08-26
+----------------------
+
+Changed
+=======
+
+- Use the DMAD2D 2.1.0 that improves performances when drawing an image.
+
+Fixed
+=====
+
+- Fix the disabling of GFXMMU (fix the LCD frame buffer address).
+
+
+----------------------
  [1.0.3] - 2022-08-19
 ----------------------
 

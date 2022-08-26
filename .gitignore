@@ -1,7 +1,7 @@
 RotationExtractor/bin/
-STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.0/build/
-STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.0/source/
+STM32L4R9DISCO-Platform-CM4hardfp_IAR83-*
 STM32L4R9DISCO-bsp/projects/microej/EWARM/Project.dep
+STM32L4R9DISCO-bsp/projects/microej/EWARM/Release/
 STM32L4R9DISCO-bsp/projects/microej/EWARM/STM32L4R9I-Discovery/
 STM32L4R9DISCO-bsp/projects/microej/EWARM/settings/Project.Release.cspy.bat
 STM32L4R9DISCO-bsp/projects/microej/EWARM/settings/Project.Release.cspy.ps1

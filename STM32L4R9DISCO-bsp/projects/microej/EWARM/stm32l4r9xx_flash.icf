@@ -18,10 +18,11 @@ define symbol __ICFEDIT_region_OSPI_end__     = 0x90FFFFFF;
 /*-Sizes-*/
 define symbol __ICFEDIT_size_cstack__ = 0x400;
 define symbol __ICFEDIT_size_heap__   = 0x200;
-define symbol __ICFEDIT_size_lcdbuffer__  = 0x3B6A0; /* (390*390*16/8)x80% (GFXMMU) */
+/*define symbol __ICFEDIT_size_lcdbuffer__  = 0x3B6A0; /* (390*390*16/8)x80% (GFXMMU) */
 /*define symbol __ICFEDIT_size_lcdbuffer__  = 0x591F0; /* (390*390*24/8)x80% (GFXMMU) */
 /*define symbol __ICFEDIT_size_lcdbuffer__  = 0x76D40; /* (390*390*32/8)x80% (GFXMMU) */
 /*define symbol __ICFEDIT_size_lcdbuffer__  = 0x6F66C; /* 24 BPP, no GFXMMU */
+define symbol __ICFEDIT_size_lcdbuffer__  = 0x4A448; /* 16 BPP, no GFXMMU 
 /**** End of ICF editor section. ###ICF###*/
 
 

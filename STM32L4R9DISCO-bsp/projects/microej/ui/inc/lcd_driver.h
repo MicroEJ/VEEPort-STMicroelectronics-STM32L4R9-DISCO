@@ -9,7 +9,6 @@
 /*
  * XXX
  */
-#define USE_GFXMMU
 
 /*
  * Update too "display.properties" file in MicroEJ platform configuration project

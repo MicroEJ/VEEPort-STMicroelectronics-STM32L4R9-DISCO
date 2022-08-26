@@ -1515,6 +1515,9 @@
                 <name>$PROJ_DIR$\..\ui\src\buttons_helper.c</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\ui\src\drawing_dma2d.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\ui\src\event_generator.c</name>
             </file>
             <file>
