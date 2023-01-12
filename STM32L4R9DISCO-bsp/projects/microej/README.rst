@@ -1,9 +1,9 @@
 .. 
-    Copyright 2014-2022 MicroEJ Corp. All rights reserved.
+    Copyright 2014-2023 MicroEJ Corp. All rights reserved.
     Use of this source code is governed by a BSD-style license that can be found with this software.
 
-.. |BOARD_NAME| replace:: STM32R4L9-DISCO
-.. |PLATFORM_VER| replace:: 1.0.1
+.. |BOARD_NAME| replace:: STM32L4R9-DISCO
+.. |PLATFORM_VER| replace:: 1.0.5
 .. |RCP| replace:: MICROEJ SDK
 .. |PLATFORM| replace:: MicroEJ Platform
 .. |PLATFORMS| replace:: MicroEJ Platforms
@@ -30,7 +30,7 @@ refer to the `README`_ for that.
 Build & Flash Scripts
 ---------------------
 
-In the folder ``project/microej/scripts/EWARM`` 
+In the folder ``project/microej/EWARM/scripts`` 
 for the IAR toolchain are scripts that can be used to build and flash the BSP.
 
 - The ``build.bat`` scripts are used to compile and link the BSP with a
@@ -48,9 +48,14 @@ The following environment variables are customizable:
 **IAR toolchain**
 
 - ``IAREW_INSTALLATION_DIR``: The path to IAR installation directory (already set to the default IAR Workbench default installation directory).
-- ``IAREW_PROJECT_CONFIGURATION``: The project configuration (``Debug`` or ``Release``).
+- ``IAREW_PROJECT_CONFIGURATION``: The project configuration (e.g. ``Release``).
 - ``IAREW_PROJECT_DIR``: The directory that contains the ``Project.eww`` IAR project file (set to ``%~dp0``: the directory that contains the executed ``.bat``).
 - ``IAREW_PROJECT_NAME``: The Eclipse CDT project name (``Project`` by default).
+
+IAR Embedded Workbench IDE version 9.20.2 do not contains |BOARD_NAME| flashloader.
+The ``run.bat`` script is using STM32CubeProgrammer to flash |BOARD_NAME| board.
+
+- ``CUBE_PROGRAMMER_DIR``: The path to STM32CubeProgrammer installation directory (already set to the default STM32CubeProgrammer default installation directory).
 
 The environment variables can be defined globally by the user or in
 the ``set_local_env.bat`` scripts.  When the ``.bat`` scripts
@@ -80,18 +85,14 @@ For a detailed Power Supply setup check the user manual on ST website under `Res
 Debugging with the |BOARD_NAME|
 -------------------------------
 
-IAR Debugging 
-~~~~~~~~~~~~~
+Debugging with IAR 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Open the file ``-bsp/projects/microej/EWARM/set_project_env.bat``.
-- Set the target configuration to ``Debug``.
-
-..  code-block::
-
-      SET IAREW_PROJECT_CONFIGURATION=Debug
-
-- Open the IAR project in IAR Workbench (open the file ``-bsp/projects/microej/EWARM/application.eww`` from IAR Workbench or by double-clicking on it from the MicroEJ SDK).
-- Ensure that the ``Debug`` target is selected in the workspace tab
-- Build and link the firmware: Right-click on the ``application`` project > ``Make`` or Press 'F7'
-- Connect the |BOARD_NAME| to your computer
-- Start the debug session by clicking on ``Project`` > ``Download and Debug``
+- Open the IAR project in IAR Embedded Workbench (open the file ``-bsp/projects/microej/EWARM/application.eww`` from IAR Embedded Workbench or by double-clicking on it from the MicroEJ SDK).
+- Disable ``Enforce Memory Configuration`` option in the ST-Link menu. 
+- Go to ``Project`` > ``Options...`` menu.
+- Disable ``Verify Download`` property in the ``Debugger`` > ``Download`` section.
+- Compile and link firmware by clicking on ``Project`` > ``Make`` button or Press 'F7'.
+- Connect the |BOARD_NAME| to your computer.
+- Flash your board using the ``run.bat`` script available in the ``project/microej/EWARM/scripts`` folder.
+- Start the debug session by clicking on ``Project`` > ``Debug without Downloading``.

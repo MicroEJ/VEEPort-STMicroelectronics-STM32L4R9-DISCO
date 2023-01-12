@@ -1,10 +1,19 @@
 ..
-	Copyright 2019-2022 MicroEJ Corp. All rights reserved.
+	Copyright 2019-2023 MicroEJ Corp. All rights reserved.
 	Use of this source code is governed by a BSD-style license that can be found with this software.
 
 ===========
  Changelog
 ===========
+
+----------------------
+ [1.0.5] - 2023-01-11
+----------------------
+
+Changed
+=======
+
+- Update the Debugging section of the Readme
 
 ----------------------
  [1.0.4] - 2022-08-26

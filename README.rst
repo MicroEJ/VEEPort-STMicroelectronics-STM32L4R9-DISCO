@@ -1,5 +1,5 @@
 ..
-    Copyright 2019-2022 MicroEJ Corp. All rights reserved.
+    Copyright 2019-2023 MicroEJ Corp. All rights reserved.
     Use of this source code is governed by a BSD-style license that can be found with this software.
 
 .. |BOARD_NAME| replace:: STM32L4R9I-DISCO
@@ -242,7 +242,7 @@ prefixed by the given name:
   and images for the |SIM|. This project is updated once the platform
   is built.
 
-- ``STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.4``:
+- ``STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.5``:
   Contains the |RCP| Platform project which is empty by default until
   the Platform is built.
 
@@ -274,7 +274,7 @@ At the end of the execution the |PLATFORM| is fully built for the
 
 
 The Platform project should be refreshed with no error in the |RCP|
-``STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.4``.
+``STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.5``.
 
 Please refer to
 https://docs.microej.com/en/latest/ApplicationDeveloperGuide/standaloneApplication.html
@@ -291,7 +291,7 @@ To run a Testsuite on the |BOARD_NAME| board please refer to the testsuite tutor
 
 In ``config.properties``, the property ``target.platform.dir`` must be
 set to the absolute path to the platform.  For example
-``xxx/STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.4/source``.
+``xxx/STM32L4R9DISCO-Platform-CM4hardfp_IAR83-1.0.5/source``.
 
 Troubleshooting
 ===============

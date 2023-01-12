@@ -1,9 +1,9 @@
 ..
-    Copyright 2022 MicroEJ Corp. All rights reserved.
+    Copyright 2022-2023 MicroEJ Corp. All rights reserved.
     Use of this source code is governed by a BSD-style license that can be found with this software..
 
 .. |BOARD_NAME| replace:: STM32L4R9I-DISCO
-.. |PLATFORM_VER| replace:: 1.0.4
+.. |PLATFORM_VER| replace:: 1.0.5
 .. |PLATFORM| replace:: MicroEJ Platform
 .. |MANUFACTURER| replace:: STMicroelectronics
 
